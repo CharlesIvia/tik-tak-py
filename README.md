@@ -1,2 +1,2 @@
 # tik-tak-py
-A Tic-Tac-Toe game creating using Python.
+A Tic-Tac-Toe game created using Python.
