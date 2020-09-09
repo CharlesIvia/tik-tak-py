@@ -104,3 +104,11 @@ def player_choice(board):
     while position not in list(range(1, 10)) or not space_check(board, position):
         position = int(input("Choose a position: (1-9) "))
     return position
+
+#Replay
+
+
+def replay():
+    choice = input("Play again? Enter Yes or No")
+
+    return choice == "Yes"
