@@ -134,8 +134,31 @@ while True:
     else:
         game_on = False
     ###Gameplay
-    ###Player 1 turn
-    ### Player 2 turn
 
+    while game_on:
+        if turn == "Player 1":
+            #Show board
+            display_board(the_board)
+            #Choose position
+            position = player_choice(the_board)
+            #Put marker
+
+            place_marker(the_board, player_one_marker, position)
+
+            #Check win or tie
+            if win_check(the_board, player_one_marker):
+                display_board(the_board)
+                print("Player One has Won")
+                game_on = False
+            else:
+            #No tie or win the next player plays
+                if full_board_check(the_board):
+                    display_board(the_board)
+                    print("We have a tie")
+                    game_on = False
+                else:
+                    turn = "Player 2"
+        else:
+            pass
     if not replay():
         break
