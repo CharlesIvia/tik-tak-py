@@ -32,3 +32,11 @@ def player_input():
 player1, player2 = player_input()
 print(player1)
 print(player2)
+
+
+def place_marker(board, marker, position):
+    board[position] = marker
+
+
+place_marker(test_board, "T", 8)
+display_board(test_board)
