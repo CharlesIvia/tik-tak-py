@@ -95,3 +95,12 @@ def full_board_check(board):
             return False
     #Board if full
     return True
+
+#Players choice
+
+
+def player_choice(board):
+    position = 0
+    while position not in list(range(1, 10)) or not space_check(board, position):
+        position = int(input("Choose a position: (1-9) "))
+    return position
