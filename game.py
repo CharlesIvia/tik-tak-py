@@ -16,8 +16,8 @@ def display_board(board):
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('   |   |')
 
-test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-display_board(test_board)
+# test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+# display_board(test_board)
 
 #Player input
 
@@ -32,9 +32,9 @@ def player_input():
     else:
         return("O", "X")
 
-player1, player2 = player_input()
-print(player1)
-print(player2)
+# player1, player2 = player_input()
+# print(player1)
+# print(player2)
 
 #Place marker on board
 
@@ -43,8 +43,8 @@ def place_marker(board, marker, position):
     board[position] = marker
 
 
-place_marker(test_board, "T", 8)
-display_board(test_board)
+# place_marker(test_board, "T", 8)
+# display_board(test_board)
 
 #Check if there is a winner
 
@@ -66,7 +66,7 @@ def win_check(board, mark):
             (board[1] == mark and board[5] == mark and board[9] == mark)
             )
 
-print(win_check(test_board, "X"))
+# print(win_check(test_board, "X"))
 
 #Which player goes first
 
@@ -78,7 +78,7 @@ def choose_first():
     else:
         return "Player 2"
 
-print(choose_first())
+# print(choose_first())
 
 
 #Check if space is available
@@ -159,6 +159,26 @@ while True:
                 else:
                     turn = "Player 2"
         else:
-            pass
+            #Show board
+            display_board(the_board)
+            #Choose position
+            position = player_choice(the_board)
+            #Put marker
+
+            place_marker(the_board, player_two_marker, position)
+
+            #Check win or tie
+            if win_check(the_board, player_two_marker):
+                display_board(the_board)
+                print("Player Two has Won")
+                game_on = False
+            else:
+            #No tie or win the next player plays
+                if full_board_check(the_board):
+                    display_board(the_board)
+                    print("We have a tie!")
+                    game_on = False
+                else:
+                    turn = "Player 1"
     if not replay():
         break
