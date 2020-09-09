@@ -112,3 +112,30 @@ def replay():
     choice = input("Play again? Enter Yes or No")
 
     return choice == "Yes"
+
+
+#Putting the game together
+
+#While loop to keep running game
+
+print("Welcome to Tic Tac Py! Hahaha. Got that?")
+
+while True:
+    #Play game
+    ##Set everything(board, first to play, markers)
+    the_board = [" "]*10
+    player_one_marker, player_two_marker = player_input()
+
+    turn = choose_first()
+    print(turn + " will go first!")
+    play_game = input("Ready to play? y or n")
+    if play_game == "y":
+        game_on = True
+    else:
+        game_on = False
+    ###Gameplay
+    ###Player 1 turn
+    ### Player 2 turn
+
+    if not replay():
+        break
