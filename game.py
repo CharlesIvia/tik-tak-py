@@ -114,12 +114,12 @@ def replay():
     return choice == "Yes"
 
 
-#Putting the game together
+#Putting the game together -Actual gameplay
 
 #While loop to keep running game
+print('\n'*1)
 
 print("Welcome to Tic Tac Py! Hahaha. Got that?")
-
 while True:
     #Play game
     ##Set everything(board, first to play, markers)
