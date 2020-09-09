@@ -45,16 +45,18 @@ display_board(test_board)
 def win_check(board, mark):
     #Win Tic Tac Toe
     #All Rows and see if they match
-    ((board[1] == mark and board[2] == mark and board[3] == mark) or
-     (board[4] == mark and board[5] == mark and board[6] == mark) or
-     (board[7] == mark and board[8] == mark and board[9] == mark) or
+    return ((board[1] == mark and board[2] == mark and board[3] == mark) or
+            (board[4] == mark and board[5] == mark and board[6] == mark) or
+            (board[7] == mark and board[8] == mark and board[9] == mark) or
 
-     #Check columns to see if they match
-     (board[1] == mark and board[4] == mark and board[7] == mark) or
-     (board[2] == mark and board[5] == mark and board[8] == mark) or
-     (board[3] == mark and board[6] == mark and board[9] == mark) or
-     #Check both diagonals
+            #Check columns to see if they match
+            (board[1] == mark and board[4] == mark and board[7] == mark) or
+            (board[2] == mark and board[5] == mark and board[8] == mark) or
+            (board[3] == mark and board[6] == mark and board[9] == mark) or
+            #Check both diagonals
 
-     (board[3] == mark and board[5] == mark and board[7] == mark) or
-     (board[1] == mark and board[5] == mark and board[9] == mark)
-     )
+            (board[3] == mark and board[5] == mark and board[7] == mark) or
+            (board[1] == mark and board[5] == mark and board[9] == mark)
+            )
+
+print(win_check(test_board, "X"))
