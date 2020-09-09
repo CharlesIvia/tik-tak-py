@@ -54,4 +54,7 @@ def win_check(board, mark):
      (board[2] == mark and board[5] == mark and board[8] == mark) or
      (board[3] == mark and board[6] == mark and board[9] == mark) or
      #Check both diagonals
+
+     (board[3] == mark and board[5] == mark and board[7] == mark) or
+     (board[1] == mark and board[5] == mark and board[9] == mark)
      )
