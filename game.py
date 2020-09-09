@@ -1,4 +1,7 @@
+import random
 #Playing board
+
+
 def display_board(board):
     print('\n'*100)
     print('   |   |')
@@ -33,6 +36,8 @@ player1, player2 = player_input()
 print(player1)
 print(player2)
 
+#Place marker on board
+
 
 def place_marker(board, marker, position):
     board[position] = marker
@@ -40,6 +45,8 @@ def place_marker(board, marker, position):
 
 place_marker(test_board, "T", 8)
 display_board(test_board)
+
+#Check if there is a winner
 
 
 def win_check(board, mark):
@@ -60,3 +67,15 @@ def win_check(board, mark):
             )
 
 print(win_check(test_board, "X"))
+
+#Which player goes first
+
+
+def choose_first():
+    flip = random.randint(0, 1)
+    if flip == 0:
+        return "Player 1"
+    else:
+        return "Player 2"
+
+print(choose_first())
