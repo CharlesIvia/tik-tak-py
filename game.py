@@ -22,10 +22,13 @@ display_board(test_board)
 def player_input():
     marker = ''
 
-    while not (marker == 'X' or marker == 'O'):
-        marker = input('Player 1: Do you want to be X or O? ').upper()
-
-    if marker == 'X':
-        return ('X', 'O')
+    while marker != "X" and marker != "O":
+        marker = input("Player1: Choose X or O: ").upper()
+    if marker == "X":
+        return("X", "O")
     else:
-        return ('O', 'X')
+        return("O", "X")
+
+player1, player2 = player_input()
+print(player1)
+print(player2)
