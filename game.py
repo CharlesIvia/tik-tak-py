@@ -85,3 +85,13 @@ print(choose_first())
 
 def space_check(board, position):
     return board[position] == " "
+
+#Check if board is full
+
+
+def full_board_check(board):
+    for i in range(1, 10):
+        if space_check(board, i):
+            return False
+    #Board if full
+    return True
